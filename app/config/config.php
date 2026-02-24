@@ -11,7 +11,7 @@ define('DB_PASS', '');
 /**
  * De naam van de virtualhost
  */
-define('URLROOT', 'http://www.backend-periode-3.nl/');
+define('URLROOT', 'http://www.backend-periode-3.nl');
 
 /**
  * Het pad naar de folder app

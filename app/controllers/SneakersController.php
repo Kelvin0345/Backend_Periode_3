@@ -1,12 +1,12 @@
 <?php
 
-class SmartphoneController extends BaseController
+class SneakersController extends BaseController
 {
-    private $smartphoneModel;
+    private $SneakersModel;
     
     public function __construct()
     {
-        $this->smartphoneModel = $this->model('Smartphone');
+        $this->SneakersModel = $this->model('Sneakers');
     }
     
 
@@ -17,21 +17,21 @@ class SmartphoneController extends BaseController
         /**
          * Haal de resultaat van binnen
          */
-        $result = $this->smartphoneModel->getAllSmartphones();
+        $result = $this->SneakersModel->getAllSneakers();
     
         // var_dump($result);
         /**
          * data array informatio view pagina
          */
         $data = [
-            'title' => 'Overzicht Smartphones',
+            'title' => 'Overzicht Sneakers',
         ];
 
         /**
          * informatie view page
          */
         $data = [
-            'title' => 'Overzicht Smartphones',
+            'title' => 'Overzicht Sneakers',
             'result' => $result
         ];
         
@@ -41,7 +41,7 @@ class SmartphoneController extends BaseController
         /**
          * view method basecontroller view aangeroepen
          */
-        $this->view('smartphone/index', $data);
+        $this->view('Sneakers/index', $data);
 
     
     
