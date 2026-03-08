@@ -23,7 +23,7 @@
                     <TH>Materiaal</TH>
                     <TH>Gewicht</TH>
                     <TH>Releasedatum</TH>
-                    <TH>Waterdichtheid</TH>
+                    <TH>Waterdichtheid(M)</TH>
                     <TH>HorlogesType</TH>
                 </tr>
             </thead>
