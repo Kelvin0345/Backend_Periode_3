@@ -15,13 +15,21 @@ class sneakers
                         ,SKN.Merk
                         ,SKN.Model
                         ,SKN.Type
+                        ,SKN.Prijs           
+                        ,SKN.Materiaal        
+                        ,SKN.Gewicht         
+                        ,DATE_FORMAT (SKN.Releasedatum, "%d/%m/%Y") as Releasedatum
                         
              
                 FROM Sneakers as SKN
 
                 ORDER BY SKN.Merk DESC
                         ,SKN.Model DESC
-                        ,SKN.Type DESC';
+                        ,SKN.Type DESC
+                        ,SKN.Prijs DESC           
+                        ,SKN.Materiaal DESC       
+                        ,SKN.Gewicht DESC        
+                        ,SKN.Releasedatum DESC';
                        
 
         $this->db->query($sql);

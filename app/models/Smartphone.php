@@ -18,7 +18,7 @@ class smartphone
                         ,SMPS.Geheugen
                         ,SMPS.Besturingssysteem
                         ,CONCAT(SMPS.Schermgrootte, " inch") as Schermgrootte
-                        ,DATE_FORMAT(SMPS.Releasedatum, "%d/%m/%Y") as Releasedatum
+                        ,DATE_FORMAT (SMPS.Releasedatum, "%d/%m/%Y") as Releasedatum
                         ,CONCAT(SMPS.MegaPixels, " MP") as MegaPixels
              
                 FROM Smartphones as SMPS

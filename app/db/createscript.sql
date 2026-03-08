@@ -95,6 +95,10 @@ CREATE TABLE Sneakers
   ,Merk            VARCHAR(50)        NOT NULL
   ,Model           VARCHAR(50)        NOT NULL
   ,Type            VARCHAR(25)        NOT NULL
+  ,Prijs            DECIMAL(6,2)       NOT NULL
+  ,Materiaal        VARCHAR(50)        NOT NULL
+  ,Gewicht         VARCHAR(50)         not null
+  ,Releasedatum     DATE               not NULL   
   ,IsActief        BIT                NOT NULL DEFAULT 1
   ,Opmerking       VARCHAR(255)            NULL DEFAULT NULL
   ,DatumAangemaakt DATETIME(6)        NOT NULL DEFAULT NOW(6)
@@ -116,16 +120,20 @@ INSERT INTO Sneakers
    Merk
   ,Model
   ,Type
+  ,Prijs           
+  ,Materiaal        
+  ,Gewicht         
+  ,Releasedatum 
 )
 VALUES
-('Nike', 'Air Jordan 1', 'Hardloop'),
-('Adidas', 'Yeezy Boost 350', 'Basketbal'),
-('New Balance', 'Pixel 9 Pro', 'Casual'),
-('Trico', 'New Age', 'Casual'),
-('Overlord', 'Tristar 6' , 'Hardloop'),
-('Horka', 'Skyward', 'Hardloop'),
-('Nike', 'Air Max 90', 'Casual'),
-('Adidas', 'Gazelle', 'Casual');
+ ('Nike', 'Air Jordan 1', 'Hardloop', 189.99, 'Leer', 420, '1985-09-15')
+,('Adidas', 'Yeezy Boost 350', 'Basketbal', 229.99, 'Mesh', 340, '2015-06-27')
+,('New Balance', 'Pixel 9 Pro', 'Casual', 149.99, 'Synthetisch', 360, '2023-10-04')
+,('Trico', 'New Age', 'Casual', 89.99, 'Synthetisch', 390, '2022-05-12')
+,('Overlord', 'Tristar 6', 'Hardloop', 119.99, 'Mesh', 310, '2021-08-20')
+,('Horka', 'Skyward', 'Hardloop', 99.99, 'Mesh', 320, '2020-03-18')
+,('Nike', 'Air Max 90', 'Casual', 159.99, 'Leer', 400, '1990-03-26')
+,('Adidas', 'Gazelle', 'Casual', 109.99, 'Leer', 350, '1968-07-01');
 
 -- Step: 06
 -- ************************************************************************************
