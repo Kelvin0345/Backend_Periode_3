@@ -127,4 +127,63 @@ VALUES
 ('Nike', 'Air Max 90', 'Casual'),
 ('Adidas', 'Gazelle', 'Casual');
 
+-- Step: 06
+-- ************************************************************************************
+-- Doel : Maak een nieuwe tabel aan met de naam Horloges
+-- ************************************************************************************
+-- Versie      Datum          Auteur               Omschrijving
+-- ****** ***** ****** ************
+-- 01          11-02-2026     Arjan de Ruijter     Tabel Horloges
+-- ************************************************************************************
+-- Onderstaande velden toevoegen aan de tabel Horloges
+-- Materiaal (Goud, Diamant, RVS), Gewicht, Releasedatum, Waterdichtheid(m), Type (Analoog, Digitaal),
+-- Uniek kenmerk
+-- ************************************************************************************
 
+CREATE TABLE Horloges
+(
+   Id                SMALLINT         UNSIGNED   NOT NULL       AUTO_INCREMENT
+  ,Merk              VARCHAR(50)                 NOT NULL
+  ,Model             VARCHAR(50)                 NOT NULL
+  ,Prijs             DECIMAL(6,0)                NOT NULL
+  ,Materiaal         VARCHAR(50)                 NOT NULL
+  ,Gewicht           VARCHAR(50)                 NOT NULL
+  ,Releasedatum       DATE                        NOT NULL
+  ,Waterdichtheid     SMALLINT       UNSIGNED     NOT NULL  
+  ,HorlogesType       VARCHAR(50)                  NOT NULL  
+  ,IsActief          BIT                         NOT NULL       DEFAULT 1
+  ,Opmerking         VARCHAR(255)                NULL           DEFAULT NULL
+  ,DatumAangemaakt   DATETIME(6)                 NOT NULL       DEFAULT NOW(6)
+  ,DatumGewijzigd    DATETIME(6)                 NOT NULL       DEFAULT NOW(6)
+  ,CONSTRAINT        PK_Horloges_Id   PRIMARY KEY               (Id)
+) ENGINE=InnoDB;
+
+-- Step: 07
+-- ************************************************************************************
+-- Doel : Vul de tabel Horloges met gegevens
+-- ************************************************************************************
+-- Versie      Datum          Auteur               Omschrijving
+-- ****** ***** ****** ************
+-- 01          11-02-2026     Arjan de Ruijter     Vulling Horloges
+-- ************************************************************************************
+
+INSERT INTO Horloges
+(
+     Merk
+    ,Model
+    ,Prijs
+    ,Materiaal
+    ,Gewicht
+    ,Releasedatum
+    ,Waterdichtheid
+    ,HorlogesType
+)
+VALUES
+ ('Rolex', 'Daytona 126500LN', 19800, 'RVS', '155 gram', '2023-03-27', 100, 'Analoog')
+,('Omega', 'Speedmaster Moonwatch Professional', 8500, 'RVS', '134 gram', '2021-01-05', 50, 'Analoog')
+,('Vacheron Constantin', 'Overseas Perpetual Calendar Ultra-Thin', 98000, 'Goud', '120 gram', '2020-04-15', 50, 'Analoog')
+,('Jaeger-LeCoultre', 'Reverso Tribute Duoface', 17000, 'Goud', '85 gram', '2021-06-10', 30, 'Analoog')
+,('Cartier', 'Tank Louis Diamond Edition', 35000, 'Diamant', '95 gram', '2022-11-20', 30, 'Analoog')
+,('Casio', 'G-Shock Mudmaster', 850, 'RVS', '106 gram', '2023-08-12', 200, 'Digitaal')
+,('Patek Philippe', 'Nautilus 5711', 125000, 'RVS', '115 gram', '2018-05-30', 120, 'Analoog')
+,('Garmin', 'Fenix 7X Pro', 950, 'RVS', '89 gram', '2023-05-31', 100, 'Digitaal');

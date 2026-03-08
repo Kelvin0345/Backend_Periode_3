@@ -20,27 +20,27 @@
                     <th>Merk</th>
                     <th>Model</th>
                     <th>Prijs</th>
-                    <th>Geheugen</th>
-                    <th>Besturingssysteem</th>
-                    <th>Schermgrootte</th>
-                    <th>Releasedatum</th>
-                    <th>MegaPixel</th>
-                    <th>Verwijder</th>
+                    <TH>Materiaal</TH>
+                    <TH>Gewicht</TH>
+                    <TH>Releasedatum</TH>
+                    <TH>Waterdichtheid</TH>
+                    <TH>HorlogesType</TH>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($data['result'] as $smartphone) : ?>
+                <?php foreach($data['result'] as $Horloges) : ?>
                     <tr>
-                        <td><?= $smartphone->Merk; ?></td>
-                        <td><?= $smartphone->Model; ?></td>
-                        <td><?= $smartphone->Prijs; ?></td>
-                        <td><?= $smartphone->Geheugen; ?></td>
-                        <td><?= $smartphone->Besturingssysteem; ?></td>
-                        <td><?= $smartphone->Schermgrootte; ?></td>
-                        <td><?= $smartphone->Releasedatum; ?></td>
-                        <td><?= $smartphone->MegaPixels; ?></td>
+                        <td><?= $Horloges->Merk; ?></td>
+                        <td><?= $Horloges->Model; ?></td>
+                        <td><?= $Horloges->Prijs; ?></td>
+                        <td><?= $Horloges->Materiaal; ?></td>
+                        <td><?= $Horloges->Gewicht; ?></td>
+                        <td><?= $Horloges->Releasedatum; ?></td>
+                        <td><?= $Horloges->Waterdichtheid; ?></td>
+                        <td><?= $Horloges->HorlogesType; ?></td>
+
                         <td class="text-center">
-                            <a href="<?= URLROOT; ?>/SmartphoneController/delete/<?= $smartphone->Id; ?>"
+                            <a href="<?= URLROOT; ?>/HorlogesController/delete/<?= $Horloges->Id; ?>"
                                 onclick="return confirm('Weet je zeker dat je dit record wilt verwijderen?');">
                                 <i class="bi bi-trash3-fill text-danger"></i>
                             </a>

@@ -24,11 +24,16 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($data['result'] as $sneakers) : ?>
+                <?php foreach($data['result'] as $Sneakers) : ?>
                     <tr>
-                        <td><?= $sneakers->Merk; ?></td>
-                        <td><?= $sneakers->Model; ?></td>
-                        <td><?= $sneakers->Type; ?></td>
+                        <td><?= $Sneakers->Merk; ?></td>
+                        <td><?= $Sneakers->Model; ?></td>
+                        <td><?= $Sneakers->Type; ?></td>
+                        <td class="text-center">
+                            <a href="<?= URLROOT; ?>/SneakersController/delete/<?= $Sneakers->Id; ?>">
+                                <i class="bi bi-trash3-fill text-danger"></i>
+                            </a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
