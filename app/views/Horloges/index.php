@@ -24,7 +24,8 @@
                     <TH>Gewicht</TH>
                     <TH>Releasedatum</TH>
                     <TH>Waterdichtheid(M)</TH>
-                    <TH>HorlogesType</TH>
+                    <TH>HorlogeType</TH>
+                    <th>Verwijder</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,8 +38,7 @@
                         <td><?= $Horloges->Gewicht; ?></td>
                         <td><?= $Horloges->Releasedatum; ?></td>
                         <td><?= $Horloges->Waterdichtheid; ?></td>
-                        <td><?= $Horloges->HorlogesType; ?></td>
-
+                        <td><?= $Horloges->HorlogeType; ?></td>
                         <td class="text-center">
                             <a href="<?= URLROOT; ?>/HorlogesController/delete/<?= $Horloges->Id; ?>"
                                 onclick="return confirm('Weet je zeker dat je dit record wilt verwijderen?');">

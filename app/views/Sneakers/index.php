@@ -21,6 +21,7 @@
                     <th>Merk</th>
                     <th>Model</th>
                     <th>Type</th>
+                    <th>Verwijder</th>
                 </tr>
             </thead>
             <tbody>

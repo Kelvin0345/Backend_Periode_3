@@ -150,7 +150,7 @@ CREATE TABLE Horloges
   ,Gewicht           VARCHAR(50)                 NOT NULL
   ,Releasedatum       DATE                        NOT NULL
   ,Waterdichtheid     SMALLINT       UNSIGNED     NOT NULL  
-  ,HorlogesType       VARCHAR(50)                  NOT NULL  
+  ,HorlogeType       VARCHAR(50)                  NOT NULL  
   ,IsActief          BIT                         NOT NULL       DEFAULT 1
   ,Opmerking         VARCHAR(255)                NULL           DEFAULT NULL
   ,DatumAangemaakt   DATETIME(6)                 NOT NULL       DEFAULT NOW(6)
@@ -176,7 +176,7 @@ INSERT INTO Horloges
     ,Gewicht
     ,Releasedatum
     ,Waterdichtheid
-    ,HorlogesType
+    ,HorlogeType
 )
 VALUES
  ('Rolex', 'Daytona 126500LN', 19800, 'RVS', '155 gram', '2023-03-27', 100, 'Analoog')
@@ -187,3 +187,7 @@ VALUES
 ,('Casio', 'G-Shock Mudmaster', 850, 'RVS', '106 gram', '2023-08-12', 200, 'Digitaal')
 ,('Patek Philippe', 'Nautilus 5711', 125000, 'RVS', '115 gram', '2018-05-30', 120, 'Analoog')
 ,('Garmin', 'Fenix 7X Pro', 950, 'RVS', '89 gram', '2023-05-31', 100, 'Digitaal');
+
+
+
+

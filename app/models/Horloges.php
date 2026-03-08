@@ -19,8 +19,8 @@ class Horloges
                         ,H.Gewicht
                         ,H.Releasedatum
                         ,H.Waterdichtheid
-                        ,H.HorlogesType 
-                        ,DATE_FORMAT(H.Releasedatum, "%d/%m/%Y") as H
+                        ,H.HorlogeType 
+                        ,DATE_FORMAT(H.Releasedatum, "%d/%m/%Y") as Releasedatum
                 FROM Horloges as H
 
                 ORDER BY H.Merk DESC
@@ -30,7 +30,7 @@ class Horloges
                         ,H.Gewicht DESC
                         ,H.Releasedatum DESC
                         ,H.Waterdichtheid DESC
-                        ,H.HorlogesType DESC';
+                        ,H.HorlogeType DESC';
 
         $this->db->query($sql);
 
