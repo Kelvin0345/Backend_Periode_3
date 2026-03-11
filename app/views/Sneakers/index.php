@@ -12,6 +12,16 @@
     </div>
 </div>
 
+<div class="row-mt-3 d-flex justify-content-center">
+    <div class="col-10 text-begin text-danger">
+     <a href="<?= URLROOT; ?>/SneakersController/create"
+        class="btn btn-warning"
+        Role="button">Nieuwe Sneaker
+     </a>
+    </div>
+
+</div>
+
 <div class="row mt-3 d-flex justify-content-center">
 
     <div class="col-10">
