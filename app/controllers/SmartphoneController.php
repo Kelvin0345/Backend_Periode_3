@@ -85,7 +85,7 @@ class SmartphoneController extends BaseController
 
                 $this->smartphoneModel->create($_POST);
 
-                header('Refresh: 3; URL=' . URLROOT . '/Smartphone/index');
+                header('Refresh: 3; URL=' . URLROOT . '/smartphoneController/index');
             }            
            
         }

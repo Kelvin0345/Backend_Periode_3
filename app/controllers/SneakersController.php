@@ -84,7 +84,7 @@ class SneakersController extends BaseController
 
                 $this->SneakersModel->create($_POST);
 
-                header('Refresh: 3; URL=' . URLROOT . '/Sneakers/index');
+                header('Refresh: 3; URL=' . URLROOT . '/SneakersController/index');
             }
         }       
         $this->view('Sneakers/create', $data);

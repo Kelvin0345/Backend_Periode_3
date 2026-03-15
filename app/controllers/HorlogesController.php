@@ -85,7 +85,7 @@ class HorlogesController extends BaseController
 
                 $this->HorlogesModel->create($_POST);
 
-                header('Refresh: 3; URL=' . URLROOT . '/Horloges/index');
+                header('Refresh: 3; URL=' . URLROOT . '/HorlogesController/index');
             }
         }
         $this->view('Horloges/create', $data);
