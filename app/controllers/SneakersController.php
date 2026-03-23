@@ -95,8 +95,46 @@ class SneakersController extends BaseController
     
     
     }
-   
-           
+
+    public function update($id = null)
+    {
+        $data = [
+            'title' => 'Wijzig Sneakers',
+            'display' => 'none',
+            'message' => '',
+            'color' => ''
+        ];
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST['merk']) ||
+                empty($_POST['model']) ||
+                empty($_POST['type']) ||
+                empty($_POST['prijs']) ||
+                empty($_POST['materiaal']) ||
+                empty($_POST['gewicht']) ||
+                empty($_POST['releasedatum'])) {
+
+                $data['display'] = 'flex';
+                $data['message'] = 'Vul alle velden in';
+                $data['color'] = 'danger';
+            } else {
+                $result = $this->SneakersModel->updateSneakers($_POST);
+
+                $data['display'] = 'flex';
+                $data['message'] = 'Het record is succesvol opgeslagen';
+                $data['color'] = 'success';
+
+                header("Refresh:3; url='" . URLROOT . "/SneakersController/index'");
+                
+            }
+        }
+
+        // haal de sneaker op uit de database
+        $sneakers = $this->SneakersModel->getSneakersId($id);
+        $data['sneakers'] = $sneakers;
+
+        $this->view('Sneakers/update', $data);
+    }
         
 
 

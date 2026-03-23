@@ -85,8 +85,55 @@ class Horloges
         return $this->db->execute();
     }
     
+    public function getHorlogesById($id)
+    {
+        $sql = 'SELECT   H.Id
+                        ,H.Merk
+                        ,H.Model
+                        ,H.Prijs
+                        ,H.Materiaal
+                        ,H.Gewicht
+                        ,H.Releasedatum
+                        ,H.Waterdichtheid
+                        ,H.HorlogeType 
+                        ,DATE_FORMAT(H.Releasedatum, "%d/%m/%Y") as Releasedatum
+                FROM    Horloges as H
+                WHERE   H.Id = :id'; 
+
+        $this->db->query($sql);
+        $this->db->bind(':id', $id, PDO::PARAM_INT);
+
+        return $this->db->single();
 
 
+    }
+
+    public function updateHorloges($request)
+    {
+        //var_dump($_REQUEST);
+        $sql = 'UPDATE Horloges as H
+                SET      H.Merk = :merk
+                        ,H.Model = :model
+                        ,H.Prijs = :prijs
+                        ,H.Gewicht = :gewicht
+                        ,H.Releasedatum = :releasedatum
+                        ,H.Waterdichtheid = :waterdichtheid
+                        ,H.HorlogeType = :horlogetype
+                WHERE H.Id = :id';
+
+        $this->db->query($sql);
+        $this->db->bind(':id', $request['id'], PDO::PARAM_STR);
+        $this->db->bind(':merk', $request['merk'], PDO::PARAM_STR);
+        $this->db->bind(':model', $request['model'], PDO::PARAM_STR);
+        $this->db->bind(':prijs', $request['prijs'], PDO::PARAM_INT);
+        $this->db->bind(':gewicht', $request['gewicht'], PDO::PARAM_INT);
+        $this->db->bind(':releasedatum', $request['releasedatum'], PDO::PARAM_STR);
+        $this->db->bind(':waterdichtheid', $request['waterdichtheid'], PDO::PARAM_INT);
+        $this->db->bind(':horlogetype', $request['horlogetype'], PDO::PARAM_STR);
+       
+
+        return $this->db->execute();
+    }
 
     
 }

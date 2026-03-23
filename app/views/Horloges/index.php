@@ -34,6 +34,7 @@
                     <TH>Releasedatum</TH>
                     <TH>Waterdichtheid(M)</TH>
                     <TH>HorlogeType</TH>
+                    <th>Wijzig</th>
                     <th>Verwijder</th>
                 </tr>
             </thead>
@@ -48,6 +49,11 @@
                         <td><?= $Horloges->Releasedatum; ?></td>
                         <td><?= $Horloges->Waterdichtheid; ?></td>
                         <td><?= $Horloges->HorlogeType; ?></td>
+                        <td class="text-center">
+                            <a href="<?= URLROOT; ?>/HorlogesController/update/<?= $Horloges->Id; ?>">
+                                <i class="bi bi-pencil-fill text-success"></i>
+                            </a>
+                        </td>
                         <td class="text-center">
                             <a href="<?= URLROOT; ?>/HorlogesController/delete/<?= $Horloges->Id; ?>"
                                 onclick="return confirm('Weet je zeker dat je dit record wilt verwijderen?');">

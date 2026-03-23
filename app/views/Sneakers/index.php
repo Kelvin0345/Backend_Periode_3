@@ -35,6 +35,7 @@
                     <th>Materiaal</th>
                     <th>Gewicht</th>
                     <th>Releasedatum</th>
+                    <th>Wijzig</th>
                     <th>Verwijder</th>
                 </tr>
             </thead>
@@ -48,6 +49,11 @@
                         <td><?= $Sneakers->Materiaal; ?></td>
                         <td><?= $Sneakers->Gewicht; ?></td>
                         <td><?= $Sneakers->Releasedatum; ?></td>
+                        <td class="text-center">
+                            <a href="<?= URLROOT; ?>/SneakersController/update/<?= $Sneakers->Id; ?>">
+                                <i class="bi bi-pencil-fill text-success"></i>
+                            </a>
+                        </td>
                         <td class="text-center">
                             <a href="<?= URLROOT; ?>/SneakersController/delete/<?= $Sneakers->Id; ?>">
                                 <i class="bi bi-trash3-fill text-danger"></i>

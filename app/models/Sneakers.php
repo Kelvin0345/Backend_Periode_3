@@ -1,6 +1,6 @@
 <?php
 
-class sneakers
+class Sneakers
 {
     private $db;
 
@@ -80,7 +80,52 @@ class sneakers
         return $this->db->execute();
     }
     
+    public function getSneakersId($id)
+    {
+        $sql = 'SELECT   SKN.Id
+                        ,SKN.Merk
+                        ,SKN.Model
+                        ,SKN.Type
+                        ,SKN.Prijs
+                        ,SKN.Materiaal
+                        ,SKN.Gewicht
+                        ,SKN.Releasedatum
+                FROM    Sneakers as SKN
+                WHERE   SKN.Id = :id'; 
 
+        $this->db->query($sql);
+        $this->db->bind(':id', $id, PDO::PARAM_INT);
+
+        return $this->db->single();
+
+
+    }
+    
+    
+    public function updateSneakers($request)
+    {   //var_dump($_REQUEST);
+        $sql = 'UPDATE Sneakers as SKN
+                SET     SKN.Merk = :merk,
+                        SKN.Model = :model,
+                        SKN.Type = :type,
+                        SKN.Prijs = :prijs,
+                        SKN.Materiaal = :materiaal,
+                        SKN.Gewicht = :gewicht,
+                        SKN.Releasedatum = :releasedatum
+                WHERE SKN.Id = :id';
+
+        $this->db->query($sql);
+        $this->db->bind(':id', $request['id'], PDO::PARAM_INT);
+        $this->db->bind(':merk', $request['merk'], PDO::PARAM_STR);
+        $this->db->bind(':model', $request['model'], PDO::PARAM_STR);
+        $this->db->bind(':type', $request['type'], PDO::PARAM_STR);
+        $this->db->bind(':prijs', $request['prijs'], PDO::PARAM_INT);
+        $this->db->bind(':materiaal', $request['materiaal'], PDO::PARAM_STR);
+        $this->db->bind(':gewicht', $request['gewicht'], PDO::PARAM_INT);
+        $this->db->bind(':releasedatum', $request['releasedatum'], PDO::PARAM_STR);
+
+        return $this->db->execute();
+    }
   
 
 

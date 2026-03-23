@@ -93,6 +93,51 @@ class SmartphoneController extends BaseController
     
     }   
 
+    public function update($id=NULL)
+    {
+        $data = [
+            'title' => 'Wijzig smartphone',
+            'display' => 'none',
+            'message' => ''
+
+        ];
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST['merk']) ||
+                empty($_POST['model']) ||
+                empty($_POST['prijs']) ||
+                empty($_POST['geheugen']) ||
+                empty($_POST['besturingssysteem']) ||
+                empty($_POST['schermgrootte']) ||
+                empty($_POST['releasedatum']) ||
+                empty($_POST['megapixels'])) {
+
+                // Laat de <div> tag met terugkoppeling naar de gebruiker zien
+                $data['display'] = 'flex';
+                $data['message'] = 'Vul alle velden in';
+                $data['color'] = 'danger';
+            }else {
+            
+                // Hier komt de code om de gewijzigde data op te slaan
+
+                $result = $this->smartphoneModel->updateSmartphone($_POST);
+                
+                $data['display'] = 'flex';
+                $data['message'] = 'Het record is succesvol opgeslagen';
+                $data['color'] = 'success';
+                header("Refresh:3; url='/smartphoneController/index'");
+
+
+            }
+        }
+
+        // laat de model de data ophalen uit de database
+        $data['smartphone'] = $this->smartphoneModel->getSmartphoneId($id);
+
+        $this->view('smartphone/update', $data);
+
+
+    }
 
 }
 
