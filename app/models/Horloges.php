@@ -96,7 +96,6 @@ class Horloges
                         ,H.Releasedatum
                         ,H.Waterdichtheid
                         ,H.HorlogeType 
-                        ,DATE_FORMAT(H.Releasedatum, "%d/%m/%Y") as Releasedatum
                 FROM    Horloges as H
                 WHERE   H.Id = :id'; 
 
