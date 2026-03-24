@@ -14,7 +14,7 @@
     <!-- terugkoppeling naar gebruiker -->
     <div class="row mt-3 d-<?= $data['display']; ?> justify-content-center">
         <div class="col-6 text-begin text-primary">
-            <div class="alert alert-danger-<?= $data['color']; ?>" role="alert">
+            <div class="alert alert-<?= $data['color']; ?>" role="alert">
                 <?= $data['message']; ?>
             </div>
         </div>
