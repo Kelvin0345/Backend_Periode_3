@@ -105,7 +105,7 @@ class smartphone
 
     public function updateSmartphone($request)
     {
-        //var_dump($_REQUEST);
+        var_dump($request);
         $sql = 'UPDATE Smartphones as SMPS
                 SET      SMPS.Merk = :merk
                         ,SMPS.Model = :model
