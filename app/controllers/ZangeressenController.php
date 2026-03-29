@@ -1,6 +1,6 @@
 <?php
 
-class SmartphoneController extends BaseController
+class ZangeressenController extends BaseController
 {
     private $smartphoneModel;
     

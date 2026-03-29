@@ -197,5 +197,21 @@ VALUES
 ,('Garmin', 'Fenix 7X Pro', 950, 'RVS', '89 gram', '2023-05-31', 100, 'Digitaal');
 
 
+-- -- 
 
+-- CREATE TABLE Zangeressen
 
+--  Id                SMALLINT         UNSIGNED   NOT NULL       AUTO_INCREMENT
+--   ,Artiest naam              VARCHAR(50)                 NOT NULL
+--   ,Model             VARCHAR(50)                 NOT NULL
+--   ,Prijs             DECIMAL(6,0)                NOT NULL
+--   ,Materiaal         VARCHAR(50)                 NOT NULL
+--   ,Gewicht           VARCHAR(50)                 NOT NULL
+--   ,Releasedatum       DATE                        NOT NULL
+--   ,Waterdichtheid     SMALLINT       UNSIGNED     NOT NULL  
+--   ,HorlogeType       VARCHAR(50)                  NOT NULL  
+--   ,IsActief          BIT                         NOT NULL       DEFAULT 1
+--   ,Opmerking         VARCHAR(255)                NULL           DEFAULT NULL
+--   ,DatumAangemaakt   DATETIME(6)                 NOT NULL       DEFAULT NOW(6)
+--   ,DatumGewijzigd    DATETIME(6)                 NOT NULL       DEFAULT NOW(6)
+--   ,CONSTRAINT        PK_Horloges_Id   PRIMARY KEY               (Id)

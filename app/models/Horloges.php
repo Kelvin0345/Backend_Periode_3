@@ -125,7 +125,7 @@ class Horloges
         $this->db->bind(':merk', $request['merk'], PDO::PARAM_STR);
         $this->db->bind(':model', $request['model'], PDO::PARAM_STR);
         $this->db->bind(':prijs', $request['prijs'], PDO::PARAM_INT);
-        $this->db->bind(':gewicht', $request['gewicht'], PDO::PARAM_INT);
+        $this->db->bind(':gewicht', $request['gewicht'], PDO::PARAM_STR);
         $this->db->bind(':releasedatum', $request['releasedatum'], PDO::PARAM_STR);
         $this->db->bind(':waterdichtheid', $request['waterdichtheid'], PDO::PARAM_INT);
         $this->db->bind(':horlogetype', $request['horlogetype'], PDO::PARAM_STR);

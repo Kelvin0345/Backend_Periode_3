@@ -21,51 +21,92 @@
             <form action="<?= URLROOT; ?>/HorlogesController/create" method="post">
                 <div class="mb-3">
                     <label for="merk" class="form-label">Merk</label>
-                    <input name="merk" type="text" class="form-control" id="merk" value="<?= $_POST['merk'] ?? ''; ?>">
+                    <input name="merk" type="text"
+                        class="form-control <?= isset($data['errors']['merk']) ? 'is-invalid' : ''; ?>" id="merk"
+                        value="<?= $_POST['merk'] ?? ''; ?>">
+                    <?php if (isset($data['errors']['merk'])): ?>
+                        <div class="invalid-feedback"><?= $data['errors']['merk']; ?></div>
+                    <?php endif; ?>
                 </div>
 
                 <div class="mb-3">
                     <label for="model" class="form-label">Model</label>
-                    <input name="model" type="text" class="form-control" id="model" value="<?= $_POST['model'] ?? ''; ?>" required>
+                    <input name="model" type="text"
+                        class="form-control <?= isset($data['errors']['model']) ? 'is-invalid' : ''; ?>" id="model"
+                        value="<?= $_POST['model'] ?? ''; ?>">
+                    <?php if (isset($data['errors']['model'])): ?>
+                        <div class="invalid-feedback"><?= $data['errors']['model']; ?></div>
+                    <?php endif; ?>
                 </div>
 
                 <div class="mb-3">
                     <label for="prijs" class="form-label">Prijs</label>
-                    <input name="prijs" type="number" min="0" max="9999" step="0.01" class="form-control" id="prijs" value="<?= $_POST['prijs'] ?? ''; ?>" required>
+                    <input name="prijs" type="text"
+                        class="form-control <?= isset($data['errors']['prijs']) ? 'is-invalid' : ''; ?>" id="prijs"
+                        value="<?= $_POST['prijs'] ?? ''; ?>">
+                    <?php if (isset($data['errors']['prijs'])): ?>
+                        <div class="invalid-feedback"><?= $data['errors']['prijs']; ?></div>
+                    <?php endif; ?>
                 </div>
+
 
                 <div class="mb-3">
                     <label for="materiaal" class="form-label">Materiaal</label>
-                    <input name="materiaal" type="text"  class="form-control" id="materiaal" value="<?= $_POST['materiaal'] ?? ''; ?>" required>
+                    <input name="materiaal" type="text"
+                        class="form-control <?= isset($data['errors']['materiaal']) ? 'is-invalid' : ''; ?>"
+                        id="materiaal" value="<?= $_POST['materiaal'] ?? ''; ?>">
+                    <?php if (isset($data['errors']['materiaal'])): ?>
+                        <div class="invalid-feedback"><?= $data['errors']['materiaal']; ?></div>
+                    <?php endif; ?>
                 </div>
 
                 <div class="mb-3">
-                    <label for="Gewicht" class="form-label">Gewicht</label>
-                    <input name="gewicht" type="number" min="0" max="4000" class="form-control" id="gewicht" value="<?= $_POST['gewicht'] ?? ''; ?>" required>
+                    <label for="gewicht" class="form-label">Gewicht</label>
+                    <input name="gewicht" type="text" 
+                        class="form-control <?= isset($data['errors']['gewicht']) ? 'is-invalid' : ''; ?>" id="gewicht"
+                        value="<?= $_POST['gewicht'] ?? ''; ?>">
+                    <?php if (isset($data['errors']['gewicht'])): ?>
+                        <div class="invalid-feedback"><?= $data['errors']['gewicht']; ?></div>
+                    <?php endif; ?>
                 </div>
 
                 <div class="mb-3">
                     <label for="releasedatum" class="form-label">Releasedatum</label>
-                    <input name="releasedatum" type="date" class="form-control" id="releasedatum" value="<?= $_POST['releasedatum'] ?? ''; ?>" required>
+                    <input name="releasedatum" type="date"
+                        class="form-control <?= isset($data['errors']['releasedatum']) ? 'is-invalid' : ''; ?>"
+                        id="releasedatum" value="<?= $_POST['releasedatum'] ?? ''; ?>">
+                    <?php if (isset($data['errors']['releasedatum'])): ?>
+                        <div class="invalid-feedback"><?= $data['errors']['releasedatum']; ?></div>
+                    <?php endif; ?>
                 </div>
 
                 <div class="mb-3">
                     <label for="waterdichtheid" class="form-label">Waterdichtheid</label>
-                    <input name="waterdichtheid" type="number" min="0" max="10" step="0.01" class="form-control" id="waterdichtheid" value="<?= $_POST['waterdichtheid'] ?? ''; ?>" required>
+                    <input name="waterdichtheid" type="number" min="0" max="4000" step="0.01" class="form-control <?= isset($data['errors']['waterdichtheid']) ? 'is-invalid' : ''; ?>" id="waterdichtheid" value="<?= $_POST['waterdichtheid'] ?? ''; ?>">
+                    <?php if (isset($data['errors']['waterdichtheid'])): ?>
+                        <div class="invalid-feedback"><?= $data['errors']['waterdichtheid']; ?></div>
+                    <?php endif; ?>
                 </div>
+
               
+
 
                 <div class="mb-3">
                     <label for="horlogetype" class="form-label">Horlogetype</label>
-                    <input name="horlogetype" type="text" class="form-control" id="gewicht" value="<?= $_POST['Horlogetype'] ?? ''; ?>" required>
+                    <input name="horlogetype" type="text"
+                        class="form-control <?= isset($data['errors']['horlogetype']) ? 'is-invalid' : ''; ?>" id="horlogetype"
+                        value="<?= $_POST['horlogetype'] ?? ''; ?>">
+                    <?php if (isset($data['errors']['horlogetype'])): ?>
+                        <div class="invalid-feedback"><?= $data['errors']['horlogetype']; ?></div>
+                    <?php endif; ?>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Verstuur</button>
 
-                
+
             </form>
 
-            <a href="<?= URLROOT; ?>/homepages/index"><i class="bi bi-arrow-left"></i></a>
+            <a href="<?= URLROOT; ?>/HorlogesController/index"><i class="bi bi-arrow-left"></i></a>
         </div>
     </div>
 </div>
