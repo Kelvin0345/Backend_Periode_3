@@ -1,9 +1,5 @@
 <?php require_once APPROOT . '/views/includes/header.php'; ?>
 
-
-<!-- <?php var_dump($_POST); ?> -->
-
-<!-- voor het centreren van container gebruik -->
 <div class="container">
     <div class="row mt-4 d-flex justify-content-center">
         <div class="col-6">
@@ -11,7 +7,6 @@
         </div>
     </div>
 
-    <!-- terugkoppeling naar gebruiker -->
     <div class="row mt-3 d-<?= $data['display']; ?> justify-content-center">
         <div class="col-6 text-begin text-primary">
             <div class="alert alert-<?= $data['color']; ?>" role="alert">
@@ -20,83 +15,69 @@
         </div>
     </div>
 
-
-
-
-    <!-- update formulier -->
     <div class="row mt-3 d-flex justify-content-center">
         <div class="col-6">
-            <form action="<?= URLROOT; ?>/SmartphoneController/update" method="post">
+            <form action="<?= URLROOT; ?>/ZangeressenController/update" method="post">
+
                 <div class="mb-3">
-                    <label for="merk" class="form-label">Merk</label>
-                    <input name="merk" type="text" class="form-control <?= isset($data['errors']['merk']) ? 'is-invalid' : ''; ?>" id="merk" value="<?= $_POST['merk'] ?? $data['smartphone']->Merk; ?>">
-                    <?php if (isset($data['errors']['merk'])): ?>
-                        <div class="invalid-feedback"><?= $data['errors']['merk']; ?></div>
-                    <?php endif; ?>
+                    <label for="naam" class="form-label">Naam</label>
+                    <input name="naam" type="text"
+                        class="form-control <?= isset($data['errors']['naam']) ? 'is-invalid' : ''; ?>" id="naam"
+                        value="<?= $_POST['naam'] ?? $data['zangeres']->Naam; ?>">
+                    <div class="invalid-feedback"><?= $data['errors']['naam'] ?? ''; ?></div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="model" class="form-label">Model</label>
-                    <input name="model" type="text" class="form-control <?= isset($data['errors']['model']) ? 'is-invalid' : ''; ?>" id="model" value="<?= $_POST['model'] ?? $data['smartphone']->Model; ?>">
-                    <?php if (isset($data['errors']['model'])): ?>
-                        <div class="invalid-feedback"><?= $data['errors']['model']; ?></div>
-                    <?php endif; ?>
+                    <label for="vermogen" class="form-label">Vermogen</label>
+                    <input name="vermogen" type="number"
+                        class="form-control <?= isset($data['errors']['vermogen']) ? 'is-invalid' : ''; ?>"
+                        id="vermogen" value="<?= $_POST['vermogen'] ?? $data['zangeres']->Vermogen; ?>">
+                    <div class="invalid-feedback"><?= $data['errors']['vermogen'] ?? ''; ?></div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="prijs" class="form-label">Prijs</label>
-                    <input name="prijs" type="number" min="0" max="9999" step="0.01" class="form-control <?= isset($data['errors']['prijs']) ? 'is-invalid' : ''; ?>" id="prijs" value="<?= $_POST['prijs'] ?? $data['smartphone']->Prijs; ?>">
-                    <?php if (isset($data['errors']['prijs'])): ?>
-                        <div class="invalid-feedback"><?= $data['errors']['prijs']; ?></div>
-                    <?php endif; ?>
+                    <label for="land" class="form-label">Land</label>
+                    <input name="land" type="text"
+                        class="form-control <?= isset($data['errors']['land']) ? 'is-invalid' : ''; ?>" id="land"
+                        value="<?= $_POST['land'] ?? $data['zangeres']->Land; ?>">
+                    <div class="invalid-feedback"><?= $data['errors']['land'] ?? ''; ?></div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="geheugen" class="form-label">Geheugen (GB)</label>
-                    <input name="geheugen" type="number" min="0" max="4000" class="form-control <?= isset($data['errors']['geheugen']) ? 'is-invalid' : ''; ?>" id="geheugen" value="<?= $_POST['geheugen'] ?? $data['smartphone']->Geheugen; ?>">
-                    <?php if (isset($data['errors']['geheugen'])): ?>
-                        <div class="invalid-feedback"><?= $data['errors']['geheugen']; ?></div>
-                    <?php endif; ?>
+                    <label for="leeftijd" class="form-label">Leeftijd</label>
+                    <input name="leeftijd" type="number"
+                        class="form-control <?= isset($data['errors']['leeftijd']) ? 'is-invalid' : ''; ?>"
+                        id="leeftijd" value="<?= $_POST['leeftijd'] ?? $data['zangeres']->Leeftijd; ?>">
+                    <div class="invalid-feedback"><?= $data['errors']['leeftijd'] ?? ''; ?></div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="besturingssysteem" class="form-label">Besturingssysteem</label>
-                    <input name="besturingssysteem" type="text" class="form-control <?= isset($data['errors']['besturingssysteem']) ? 'is-invalid' : ''; ?>" id="besturingssysteem" value="<?= $_POST['besturingssysteem'] ?? $data['smartphone']->Besturingssysteem; ?>">
-                    <?php if (isset($data['errors']['besturingssysteem'])): ?>
-                        <div class="invalid-feedback"><?= $data['errors']['besturingssysteem']; ?></div>
-                    <?php endif; ?>
+                    <label for="bekendstenummer" class="form-label">Bekendste nummer</label>
+                    <input name="bekendstenummer" type="text"
+                        class="form-control <?= isset($data['errors']['bekendstenummer']) ? 'is-invalid' : ''; ?>"
+                        id="bekendstenummer"
+                        value="<?= $_POST['bekendstenummer'] ?? $data['zangeres']->BekendsteNummer; ?>">
+                    <div class="invalid-feedback"><?= $data['errors']['bekendstenummer'] ?? ''; ?></div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="schermgrootte" class="form-label">Schermgrootte</label>
-                    <input name="schermgrootte" type="number" min="0" max="4000" step="0.01" class="form-control <?= isset($data['errors']['schermgrootte']) ? 'is-invalid' : ''; ?>" id="schermgrootte" value="<?= $_POST['schermgrootte'] ??  $data['smartphone']->Schermgrootte; ?>">
-                    <?php if (isset($data['errors']['schermgrootte'])): ?>
-                        <div class="invalid-feedback"><?= $data['errors']['schermgrootte']; ?></div>
-                    <?php endif; ?>
+                    <label for="debuutjaar" class="form-label">Debuutjaar</label>
+                    <input name="debuutjaar" type="number"
+                        class="form-control <?= isset($data['errors']['debuutjaar']) ? 'is-invalid' : ''; ?>"
+                        id="debuutjaar" value="<?= $_POST['debuutjaar'] ?? $data['zangeres']->Debuutjaar; ?>">
+                    <div class="invalid-feedback"><?= $data['errors']['debuutjaar'] ?? ''; ?></div>
                 </div>
 
-                <div class="mb-3">
-                    <label for="megapixels" class="form-label">Megapixels</label>
-                    <input name="megapixels" type="number" min="0" max="10000" class="form-control <?= isset($data['errors']['megapixels']) ? 'is-invalid' : ''; ?>" id="megapixels" value="<?= $_POST['megapixels'] ?? $data['smartphone']->MegaPixels; ?>">
-                    <?php if (isset($data['errors']['megapixels'])): ?>
-                        <div class="invalid-feedback"><?= $data['errors']['megapixels']; ?></div>
-                    <?php endif; ?>
-                </div>
-
-                <div class="mb-3">
-                    <label for="releasedatum" class="form-label">Releasedatum</label>
-                    <input name="releasedatum" type="date" class="form-control <?= isset($data['errors']['releasedatum']) ? 'is-invalid' : ''; ?>" id="releasedatum" value="<?= $_POST['releasedatum'] ?? $data['smartphone']->Releasedatum; ?>">
-                    <?php if (isset($data['errors']['releasedatum'])): ?>
-                        <div class="invalid-feedback"><?= $data['errors']['releasedatum']; ?></div>
-                    <?php endif; ?>
-                </div>
-                
-                <input type="hidden" name="id" value="<?= $_POST['id'] ??$data['smartphone']->Id ?>">
+                <input type="hidden" name="id" value="<?= $_POST['id'] ?? $data['zangeres']->Id ?>">
                 <button type="submit" class="btn btn-primary">Verstuur</button>
+
             </form>
 
-            <a href="<?= URLROOT; ?>/homepages/index"><i class="bi bi-arrow-left"></i></a>
+            <a href="<?= URLROOT; ?>/homepages/index">
+                <i class="bi bi-arrow-left"></i>
+            </a>
         </div>
     </div>
-</div>  
+</div>
+
 <?php require APPROOT . '/views/includes/footer.php'; ?>

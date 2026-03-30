@@ -197,21 +197,33 @@ VALUES
 ,('Garmin', 'Fenix 7X Pro', 950, 'RVS', '89 gram', '2023-05-31', 100, 'Digitaal');
 
 
--- -- 
 
--- CREATE TABLE Zangeressen
+CREATE TABLE zangeressen
+(
+     Id                SMALLINT        UNSIGNED    NOT NULL    AUTO_INCREMENT
+    ,Naam              VARCHAR(100)                NOT NULL
+    ,Vermogen          VARCHAR(50)                 NOT NULL
+    ,Land              VARCHAR(50)                 NOT NULL
+    ,Leeftijd          TINYINT         UNSIGNED    NOT NULL
+    ,BekendsteNummer   VARCHAR(100)                NOT NULL
+    ,Debuutjaar        DATE                        NOT NULL
+    ,CONSTRAINT         PK_Zangeressen_Id           PRIMARY KEY (Id)
+) ENGINE=InnoDB;
 
---  Id                SMALLINT         UNSIGNED   NOT NULL       AUTO_INCREMENT
---   ,Artiest naam              VARCHAR(50)                 NOT NULL
---   ,Model             VARCHAR(50)                 NOT NULL
---   ,Prijs             DECIMAL(6,0)                NOT NULL
---   ,Materiaal         VARCHAR(50)                 NOT NULL
---   ,Gewicht           VARCHAR(50)                 NOT NULL
---   ,Releasedatum       DATE                        NOT NULL
---   ,Waterdichtheid     SMALLINT       UNSIGNED     NOT NULL  
---   ,HorlogeType       VARCHAR(50)                  NOT NULL  
---   ,IsActief          BIT                         NOT NULL       DEFAULT 1
---   ,Opmerking         VARCHAR(255)                NULL           DEFAULT NULL
---   ,DatumAangemaakt   DATETIME(6)                 NOT NULL       DEFAULT NOW(6)
---   ,DatumGewijzigd    DATETIME(6)                 NOT NULL       DEFAULT NOW(6)
---   ,CONSTRAINT        PK_Horloges_Id   PRIMARY KEY               (Id)
+INSERT INTO Zangeressen
+(
+     Naam
+    ,Vermogen
+    ,Land
+    ,Leeftijd
+    ,BekendsteNummer
+    ,Debuutjaar
+)
+VALUES
+     ('Rihanna', '$1.4 Billion', 'Barbados', 36, 'Umbrella', '2005-05-24')
+    ,('Taylor Swift', '$1.1 Billion', 'United States', 34, 'Shake It Off', '2006-10-24')
+    ,('Beyoncé', '$800 Million', 'United States', 42, 'Halo', '1997-01-01')
+    ,('Madonna', '$580 Million', 'United States', 65, 'Like a Virgin', '1982-10-06')
+    ,('Celine Dion', '$480 Million', 'Canada', 56, 'My Heart Will Go On', '1981-11-06')
+    ,('Dolly Parton', '$650 Million', 'United States', 78, 'Jolene', '1967-02-13')
+    ,('Gloria Estefan', '$500 Million', 'Cuba', 66, 'Conga', '1977-09-01');
