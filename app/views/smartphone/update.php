@@ -95,7 +95,7 @@
                 <button type="submit" class="btn btn-primary">Verstuur</button>
             </form>
 
-            <a href="<?= URLROOT; ?>/homepages/index"><i class="bi bi-arrow-left"></i></a>
+            <a href="<?= URLROOT; ?>/SmartphoneController/index"><i class="bi bi-arrow-left"></i></a>
         </div>
     </div>
 </div>  

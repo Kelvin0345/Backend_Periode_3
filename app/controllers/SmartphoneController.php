@@ -76,7 +76,7 @@ class SmartphoneController extends BaseController
             } elseif (strlen($_POST['merk']) > 20) {
                 $errors['merk'] = 'Merk mag maximaal 20 tekens bevatten';
             }
-            
+                
             if (empty(trim($_POST['model']))) {
                 $errors['model'] = 'Voer een model in';
             } elseif (strlen($_POST['model']) > 20) {
@@ -85,20 +85,20 @@ class SmartphoneController extends BaseController
 
             if (empty(trim($_POST['prijs']))) {
                 $errors['prijs'] = 'Voer een prijs in';
-            } elseif (!is_numeric($_POST['prijs']) || $_POST['prijs'] < 0 || $_POST['prijs'] > 9999.99) {
-                $errors['prijs'] = 'voer een geldige prijs in (0 - 9999,99)';
+            } elseif (!is_numeric($_POST['prijs']) || $_POST['prijs'] < 100 || $_POST['prijs'] > 9999.99) {
+                $errors['prijs'] = 'voer een geldige prijs in (100 - 9999,99)';
             }
             
             if (empty(trim($_POST['geheugen']))) {
                 $errors['geheugen'] = 'Voer een geheugen in';
-            } elseif (!is_numeric($_POST['geheugen']) || $_POST['geheugen'] < 0 || $_POST['geheugen'] > 4000) {
+            } elseif (!is_numeric($_POST['geheugen']) || $_POST['geheugen'] < 1000 || $_POST['geheugen'] > 4000) {
                 $errors['geheugen'] = 'voer een geldige geheugen in (0 - 4000 GB)';
             }
         
             if (empty(trim($_POST['besturingssysteem']))) {
                 $errors['besturingssysteem'] = 'Voer een besturingssysteem in';
-            } elseif (strlen($_POST['besturingssysteem']) > 20) {
-                $errors['besturingssysteem'] = 'maximaal 20 tekens bevatten';
+            } elseif (strlen($_POST['besturingssysteem']) > 50) {
+                $errors['besturingssysteem'] = 'maximaal 50 tekens bevatten';
             }
 
             if (empty(trim($_POST['schermgrootte']))) {
@@ -116,8 +116,8 @@ class SmartphoneController extends BaseController
             
             if (empty(trim($_POST['megapixels']))) {
                 $errors['megapixels'] = 'Voer het aantal megapixels in';
-            } elseif (!is_numeric($_POST['megapixels']) || $_POST['megapixels'] < 0 || $_POST['megapixels'] > 10) {
-                $errors['megapixels'] = 'voer een aantal in (0 - 200)';
+            } elseif (!is_numeric($_POST['megapixels']) || $_POST['megapixels'] < 10 || $_POST['megapixels'] > 200) {
+                $errors['megapixels'] = 'voer een aantal in (10 - 200)';
                 
             }
 
@@ -166,26 +166,26 @@ class SmartphoneController extends BaseController
 
             if (empty(trim($_POST['prijs']))) {
                 $errors['prijs'] = 'Voer een prijs in';
-            } elseif (!is_numeric($_POST['prijs']) || $_POST['prijs'] < 0 || $_POST['prijs'] > 9999.99) {
-                $errors['prijs'] = 'voer een geldige prijs in (0 - 9999,99)';
+            } elseif (!is_numeric($_POST['prijs']) || $_POST['prijs'] < 100 || $_POST['prijs'] > 9999.99) {
+                $errors['prijs'] = 'voer een geldige prijs in (100 - 9999,99)';
             }
             
             if (empty(trim($_POST['geheugen']))) {
                 $errors['geheugen'] = 'Voer een geheugen in';
-            } elseif (!is_numeric($_POST['geheugen']) || $_POST['geheugen'] < 0 || $_POST['geheugen'] > 4000) {
-                $errors['geheugen'] = 'voer een geldige geheugen in (0 - 4000 GB)';
+            } elseif (!is_numeric($_POST['geheugen']) || $_POST['geheugen'] < 1000 || $_POST['geheugen'] > 4000) {
+                $errors['geheugen'] = 'voer een geldige geheugen in (1000 - 4000 GB)';
             }
         
             if (empty(trim($_POST['besturingssysteem']))) {
                 $errors['besturingssysteem'] = 'Voer een besturingssysteem in';
-            } elseif (strlen($_POST['besturingssysteem']) > 20) {
-                $errors['besturingssysteem'] = 'maximaal 20 tekens bevatten';
+            } elseif (strlen($_POST['besturingssysteem']) > 50) {
+                $errors['besturingssysteem'] = 'maximaal 50 tekens bevatten';
             }
 
             if (empty(trim($_POST['schermgrootte']))) {
                 $errors['schermgrootte'] = 'Voer een schermgrootte in';
-            } elseif (!is_numeric($_POST['schermgrootte']) || $_POST['schermgrootte'] < 0 || $_POST['schermgrootte'] > 10) {
-                $errors['schermgrootte'] = 'voer een geldige schermgrootte in (0 - 10 inch)';
+            } elseif (!is_numeric($_POST['schermgrootte']) || $_POST['schermgrootte'] < 3 || $_POST['schermgrootte'] > 10) {
+                $errors['schermgrootte'] = 'voer een geldige schermgrootte in (3 - 10 inch)';
                 
             }
 
@@ -197,8 +197,8 @@ class SmartphoneController extends BaseController
             
             if (empty(trim($_POST['megapixels']))) {
                 $errors['megapixels'] = 'Voer het aantal megapixels in';
-            } elseif (!is_numeric($_POST['megapixels']) || $_POST['megapixels'] < 0 || $_POST['megapixels'] > 10) {
-                $errors['megapixels'] = 'voer een aantal in (0 - 200)';
+            } elseif (!is_numeric($_POST['megapixels']) || $_POST['megapixels'] < 10 || $_POST['megapixels'] > 200) {
+                $errors['megapixels'] = 'voer een aantal in (10 - 200)';
                 
             } 
             

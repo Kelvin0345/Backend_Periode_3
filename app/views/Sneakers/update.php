@@ -104,7 +104,7 @@
 
             </form>
 
-            <a href="<?= URLROOT; ?>/homepages/index"><i class="bi bi-arrow-left"></i></a>
+            <a href="<?= URLROOT; ?>/SneakersController/index"><i class="bi bi-arrow-left"></i></a>
         </div>
     </div>
 </div>
