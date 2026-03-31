@@ -177,7 +177,7 @@ class SneakersController extends BaseController
 
             if (empty(trim($_POST['gewicht']))) {
                 $errors['gewicht'] = 'Voer een gewicht in';
-            } elseif (!is_numeric($_POST['gewicht']) || $_POST['gewicht'] < 0 || $_POST['gewicht'] > 100) {
+            } elseif (!is_numeric($_POST['gewicht']) || $_POST['gewicht'] < 0 || $_POST['gewicht'] > 1000) {
                 $errors['gewicht'] = 'voer een geldige gewicht in (0 - 80 gram)';
 
             }

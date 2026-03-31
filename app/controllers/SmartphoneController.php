@@ -91,7 +91,7 @@ class SmartphoneController extends BaseController
             
             if (empty(trim($_POST['geheugen']))) {
                 $errors['geheugen'] = 'Voer een geheugen in';
-            } elseif (!is_numeric($_POST['geheugen']) || $_POST['geheugen'] < 1000 || $_POST['geheugen'] > 4000) {
+            } elseif (!is_numeric($_POST['geheugen']) || $_POST['geheugen'] < 40 || $_POST['geheugen'] > 4000) {
                 $errors['geheugen'] = 'voer een geldige geheugen in (0 - 4000 GB)';
             }
         
@@ -172,8 +172,8 @@ class SmartphoneController extends BaseController
             
             if (empty(trim($_POST['geheugen']))) {
                 $errors['geheugen'] = 'Voer een geheugen in';
-            } elseif (!is_numeric($_POST['geheugen']) || $_POST['geheugen'] < 1000 || $_POST['geheugen'] > 4000) {
-                $errors['geheugen'] = 'voer een geldige geheugen in (1000 - 4000 GB)';
+            } elseif (!is_numeric($_POST['geheugen']) || $_POST['geheugen'] < 40 || $_POST['geheugen'] > 4000) {
+                $errors['geheugen'] = 'voer een geldige geheugen in (40 - 4000 GB)';
             }
         
             if (empty(trim($_POST['besturingssysteem']))) {
