@@ -82,7 +82,7 @@
                     <label for="gewicht" class="form-label">Gewicht (Gram)</label>
                     <input name="gewicht" type="number" min="0" max="10000"
                         class="form-control <?= isset($data['errors']['gewicht']) ? 'is-invalid' : ''; ?>"
-                        id="gewicht" value="<?= $_POST['gewicht'] ?? $data['sneakers']->Gewichht; ?>">
+                        id="gewicht" value="<?= $_POST['gewicht'] ?? $data['sneakers']->Gewicht; ?>">
                     <?php if (isset($data['errors']['gewicht'])): ?>
                         <div class="invalid-feedback"><?= $data['errors']['gewicht']; ?></div>
                     <?php endif; ?>

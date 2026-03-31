@@ -96,7 +96,7 @@ class HorlogesController extends BaseController
             }
 
             if (empty(trim($_POST['gewicht']))) {
-                $errors['materiaal'] = 'Voer een gewicht in';
+                $errors['gewicht'] = 'Voer een gewicht in';
             } elseif (strlen($_POST['gewicht']) > 20) {
                 $errors['gewicht'] = 'maximaal 20 tekens bevatten';
             }
@@ -177,7 +177,7 @@ class HorlogesController extends BaseController
 
             if (empty(trim($_POST['gewicht']))) {
                 $errors['gewicht'] = 'Voer een gewicht in';
-            } elseif (strlen($_POST['materiaal']) > 20) {
+            } elseif (strlen($_POST['gewicht']) > 20) {
                 $errors['gewicht'] = 'maximaal 20 tekens bevatten';
             }
 
