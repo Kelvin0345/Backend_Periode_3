@@ -18,6 +18,7 @@ class Zangeressen
                         ,Leeftijd
                         ,BekendsteNummer
                         ,Debuutjaar
+                        ,DATE_FORMAT (Debuutjaar, "%d/%m/%Y") as Debuutjaar
                 FROM    Zangeressen
                 ORDER BY Naam ASC';
 
@@ -57,11 +58,11 @@ class Zangeressen
 
         $this->db->query($sql);
         $this->db->bind(':naam', $data['naam'], PDO::PARAM_STR);
-        $this->db->bind(':vermogen', $data['vermogen'], PDO::PARAM_INT);
+        $this->db->bind(':vermogen', $data['vermogen'], PDO::PARAM_STR);
         $this->db->bind(':land', $data['land'], PDO::PARAM_STR);
         $this->db->bind(':leeftijd', $data['leeftijd'], PDO::PARAM_INT);
         $this->db->bind(':bekendstenummer', $data['bekendstenummer'], PDO::PARAM_STR);
-        $this->db->bind(':debuutjaar', $data['debuutjaar'], PDO::PARAM_INT);
+        $this->db->bind(':debuutjaar', $data['debuutjaar'], PDO::PARAM_STR);
 
         return $this->db->execute();
     }
@@ -98,11 +99,11 @@ class Zangeressen
         $this->db->query($sql);
         $this->db->bind(':id', $request['id'], PDO::PARAM_INT);
         $this->db->bind(':naam', $request['naam'], PDO::PARAM_STR);
-        $this->db->bind(':vermogen', $request['vermogen'], PDO::PARAM_INT);
+        $this->db->bind(':vermogen', $request['vermogen'], PDO::PARAM_STR);
         $this->db->bind(':land', $request['land'], PDO::PARAM_STR);
         $this->db->bind(':leeftijd', $request['leeftijd'], PDO::PARAM_INT);
         $this->db->bind(':bekendstenummer', $request['bekendstenummer'], PDO::PARAM_STR);
-        $this->db->bind(':debuutjaar', $request['debuutjaar'], PDO::PARAM_INT);
+        $this->db->bind(':debuutjaar', $request['debuutjaar'], PDO::PARAM_STR);
 
         return $this->db->execute();
     }

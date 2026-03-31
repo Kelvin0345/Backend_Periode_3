@@ -15,6 +15,7 @@
             <a href="<?= URLROOT; ?>/SneakersController/index">Mooiste Sneakers</a> |
             
             <a href="<?= URLROOT; ?>/HorlogesController/index">Duurste Horloges</a> |
+            
             <a href="<?= URLROOT; ?>/ZangeressenController/index">Rijkste zangeressen</a>
 
         </div>

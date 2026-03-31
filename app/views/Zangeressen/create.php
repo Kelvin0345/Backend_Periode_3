@@ -29,7 +29,7 @@
 
                 <div class="mb-3">
                     <label for="vermogen" class="form-label">Vermogen</label>
-                    <input name="vermogen" type="number"
+                    <input name="vermogen" type="text"
                         class="form-control <?= isset($data['errors']['vermogen']) ? 'is-invalid' : ''; ?>"
                         id="vermogen" value="<?= $_POST['vermogen'] ?? ''; ?>">
                     <div class="invalid-feedback"><?= $data['errors']['vermogen'] ?? ''; ?></div>
@@ -61,16 +61,16 @@
 
                 <div class="mb-3">
                     <label for="debuutjaar" class="form-label">Debuutjaar</label>
-                    <input name="debuutjaar" type="number"
-                        class="form-control <?= isset($data['errors']['debuutjaar']) ? 'is-invalid' : ''; ?>"
-                        id="debuutjaar" value="<?= $_POST['debuutjaar'] ?? ''; ?>">
-                    <div class="invalid-feedback"><?= $data['errors']['debuutjaar'] ?? ''; ?></div>
+                    <input name="debuutjaar" type="date" class="form-control <?= isset($data['errors']['debuutjaar']) ? 'is-invalid' : ''; ?>" id="debuutjaar" value="<?= $_POST['debuutjaar'] ?? ''; ?>">
+                    <?php if (isset($data['errors']['debuutjaar'])): ?>
+                        <div class="invalid-feedback"><?= $data['errors']['debuutjaar']; ?></div>
+                    <?php endif; ?>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Verstuur</button>
             </form>
 
-            <a href="<?= URLROOT; ?>/homepages/index">
+            <a href="<?= URLROOT; ?>/ZangeressenController/index">
                 <i class="bi bi-arrow-left"></i>
             </a>
         </div>

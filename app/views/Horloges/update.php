@@ -1,6 +1,6 @@
 <?php require_once APPROOT . '/views/includes/header.php'; ?>
 
-<?php var_dump($data['horloge']); ?>
+<!-- <?php var_dump($data['horloge']); ?> -->
 
 <div class="container">
     <div class="row mt-4 d-flex justify-content-center">
