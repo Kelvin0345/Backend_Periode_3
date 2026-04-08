@@ -100,11 +100,18 @@
                
 
                 <input type="hidden" name="id" value="<?= $_POST['id'] ?? $data['sneakers']->Id; ?>">
-                <button type="submit" class="btn btn-primary">Verstuur</button>
+               
+
+                <div class="d-flex justify-content-center mt-3 mb-5">
+                    <button type="submit" class="btn btn-primary">Verstuur</button>
+                    <a href="<?= URLROOT; ?>/sneakersController/index" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left"></i> Terug naar homepage
+                    </a>
+                </div>
 
             </form>
 
-            <a href="<?= URLROOT; ?>/SneakersController/index"><i class="bi bi-arrow-left"></i></a>
+           
         </div>
     </div>
 </div>

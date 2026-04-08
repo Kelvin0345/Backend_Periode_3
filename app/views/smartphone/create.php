@@ -68,6 +68,14 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="releasedatum" class="form-label">Releasedatum</label>
+                    <input name="releasedatum" type="date" class="form-control <?= isset($data['errors']['releasedatum']) ? 'is-invalid' : ''; ?>" id="releasedatum" value="<?= $_POST['releasedatum'] ?? ''; ?>">
+                    <?php if (isset($data['errors']['releasedatum'])): ?>
+                        <div class="invalid-feedback"><?= $data['errors']['releasedatum']; ?></div>
+                    <?php endif; ?>
+                </div>
+
+                <div class="mb-3">
                     <label for="megapixels" class="form-label">Megapixels</label>
                     <input name="megapixels" type="number" min="0" max="10000" class="form-control <?= isset($data['errors']['megapixels']) ? 'is-invalid' : ''; ?>" id="megapixels" value="<?= $_POST['megapixels'] ?? ''; ?>">
                     <?php if (isset($data['errors']['megapixels'])): ?>
@@ -75,19 +83,18 @@
                     <?php endif; ?>
                 </div>
 
-                <div class="mb-3">
-                    <label for="releasedatum" class="form-label">Releasedatum</label>
-                    <input name="releasedatum" type="date" class="form-control <?= isset($data['errors']['releasedatum']) ? 'is-invalid' : ''; ?>" id="releasedatum" value="<?= $_POST['releasedatum'] ?? ''; ?>">
-                    <?php if (isset($data['errors']['releasedatum'])): ?>
-                        <div class="invalid-feedback"><?= $data['errors']['releasedatum']; ?></div>
-                    <?php endif; ?>
+                <div class="d-flex justify-content-center mt-3 mb-5">
+                    <button type="submit" class="btn btn-primary">Verstuur</button>
+                    <a href="<?= URLROOT; ?>/smartphoneController/index" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left"></i> Terug naar homepage
+                    </a>
                 </div>
                 
 
-                <button type="submit" class="btn btn-primary">Verstuur</button>
+                
             </form>
 
-            <a href="<?= URLROOT; ?>/SmartphoneController/index"><i class="bi bi-arrow-left"></i></a>
+            
         </div>
     </div>
 </div>
