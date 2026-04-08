@@ -28,9 +28,35 @@ footer {
    
 }
 
+footer p{
+    color: #000000;
+}
+
 .navbar{
     background-color: pink;
 }
+
+
+.navbar .nav-link {
+    color: #000000; 
+    font-weight: 500;
+}
+
+
+.navbar .nav-link:hover {
+    color: #000000 ;
+}
+
+.navbar .navbar-brand {
+    color: #5d3754 ;
+}
+
+.navbar .navbar-toggler {
+    border-color: #5d3754;
+}
+
+
+
 
 /* Table styling */
 .table th { background-color: #f8f9fa; }

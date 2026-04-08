@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-nav">
     <div class="container">
       <a class="navbar-brand" href="<?= URLROOT; ?>/homepages/index">
         <i class="bi bi-code-square"></i> MVC Basics
@@ -23,7 +23,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav  ms-auto">
           <li class="nav-item">
             <a class="nav-link" href="<?= URLROOT; ?>/SmartphoneController/index">Smartphones</a>
           </li>
