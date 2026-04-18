@@ -60,7 +60,7 @@
                     <div class="card h-100 w-100">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title"><i class="bi bi-music-note-beamed"></i> Zangeressen</h5>
-                            <p class="card-text">Beheer een overzicht van de rijkste zangeressen ter wereld.</p>
+                            <p class="card-text">Beheer een overzicht van de rijkste en de lekkerste zangeressen ter wereld.</p>
                             <a href="<?= URLROOT; ?>/ZangeressenController/index" class="btn btn-primary mt-auto">Bekijk
                                 Zangeressen</a>
                         </div>
