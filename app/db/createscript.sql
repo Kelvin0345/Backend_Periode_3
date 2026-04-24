@@ -8,9 +8,9 @@
 -- **************************************************************
 
 
-DROP DATABASE IF exists `MVC_Basics_2509AB`;
-CREATE DATABASE `MVC_Basics_2509AB`;
-USE `MVC_Basics_2509AB`;
+DROP DATABASE IF exists MVC_Basics_2509AB;
+CREATE DATABASE MVC_Basics_2509AB;
+USE MVC_Basics_2509AB;
 
 
 -- Step: 02
@@ -69,11 +69,51 @@ INSERT INTO Smartphones
     ,MegaPixels
 )
 VALUES
-('Apple', 'iPhone 16 Pro', 1256.56, 64, 'iOs 18', 6.7, '2025-01-19', 50),
-('Samsung', 'Galaxy S25 Ultra', 1539, 128, 'Android 15', 6.1, '2025-02-01', 200),
-('Google', 'Pixel 9 Pro', 890, 1024, 'Android 15', 6.3, '2024-12-20', 100),
-('OnePlus','OnePlus 13 Pro', 999.99, 512, 'Android 15',  6.8, '2025-01-10', 64),
-('Xiaomi','Xiaomi 15 Ultra', 1199.00, 1024, 'Android 15',  6.9, '2025-01-25', 200);
+('Sony', 'Xperia 1 VI', 1399.99, 256, 'Android 15', 6.5, '2025-03-01', 45),
+('Sony', 'Xperia 5 VI', 999.99, 128, 'Android 15', 6.1, '2025-03-02', 60),
+('Huawei', 'P70 Pro', 1199.00, 512, 'HarmonyOS 5', 6.8, '2025-02-15', 80),
+('Huawei', 'Mate 70', 1299.00, 1024, 'HarmonyOS 5', 6.9, '2025-02-20', 70),
+('Oppo', 'Find X8 Pro', 1099.99, 512, 'Android 15', 6.7, '2025-01-30', 95),
+('Oppo', 'Reno 12', 699.99, 256, 'Android 15', 6.5, '2025-01-18', 120),
+('Vivo', 'X100 Pro+', 1199.99, 512, 'Android 15', 6.78, '2025-02-05', 85),
+('Vivo', 'V30 Pro', 799.99, 256, 'Android 15', 6.6, '2025-01-25', 110),
+('Motorola', 'Edge 50 Ultra', 999.99, 512, 'Android 15', 6.7, '2025-02-10', 75),
+('Motorola', 'Moto G85', 399.99, 128, 'Android 15', 6.5, '2025-01-12', 150),
+
+('Realme', 'GT 6 Pro', 649.99, 256, 'Android 15', 6.6, '2025-01-20', 130),
+('Realme', 'Narzo 80', 299.99, 128, 'Android 15', 6.5, '2025-01-10', 200),
+('Asus', 'ROG Phone 9', 1399.99, 1024, 'Android 15', 6.78, '2025-02-12', 55),
+('Asus', 'Zenfone 11', 899.99, 256, 'Android 15', 5.9, '2025-02-01', 90),
+('Nokia', 'X60 Pro', 749.99, 256, 'Android 15', 6.4, '2025-01-28', 100),
+('Nokia', 'G500', 349.99, 128, 'Android 15', 6.5, '2025-01-15', 180),
+('Honor', 'Magic 7 Pro', 1099.99, 512, 'Android 15', 6.81, '2025-02-18', 95),
+('Honor', '90 Lite', 399.99, 128, 'Android 15', 6.7, '2025-01-22', 140),
+('ZTE', 'Axon 50 Ultra', 899.99, 512, 'Android 15', 6.8, '2025-02-08', 85),
+('ZTE', 'Blade V70', 299.99, 128, 'Android 15', 6.5, '2025-01-14', 160),
+
+-- variaties (doorgaan tot 100)
+('Sony', 'Xperia 1 VI', 1379.99, 512, 'Android 15', 6.5, '2025-03-03', 40),
+('Huawei', 'P70 Pro', 1179.00, 256, 'HarmonyOS 5', 6.8, '2025-02-17', 75),
+('Oppo', 'Find X8 Pro', 1079.99, 256, 'Android 15', 6.7, '2025-02-01', 90),
+('Vivo', 'X100 Pro+', 1159.99, 256, 'Android 15', 6.78, '2025-02-07', 80),
+('Motorola', 'Edge 50 Ultra', 979.99, 256, 'Android 15', 6.7, '2025-02-12', 70),
+('Realme', 'GT 6 Pro', 629.99, 512, 'Android 15', 6.6, '2025-01-22', 120),
+('Asus', 'ROG Phone 9', 1429.99, 1024, 'Android 15', 6.78, '2025-02-15', 50),
+('Nokia', 'X60 Pro', 729.99, 512, 'Android 15', 6.4, '2025-01-30', 95),
+('Honor', 'Magic 7 Pro', 1129.99, 1024, 'Android 15', 6.81, '2025-02-20', 90),
+('ZTE', 'Axon 50 Ultra', 879.99, 256, 'Android 15', 6.8, '2025-02-10', 80),
+
+-- laatste reeks
+('Sony', 'Xperia 5 VI', 979.99, 256, 'Android 15', 6.1, '2025-03-05', 55),
+('Huawei', 'Mate 70', 1279.00, 512, 'HarmonyOS 5', 6.9, '2025-02-22', 65),
+('Oppo', 'Reno 12', 679.99, 128, 'Android 15', 6.5, '2025-01-20', 110),
+('Vivo', 'V30 Pro', 779.99, 512, 'Android 15', 6.6, '2025-01-27', 100),
+('Motorola', 'Moto G85', 379.99, 256, 'Android 15', 6.5, '2025-01-14', 140),
+('Realme', 'Narzo 80', 279.99, 64, 'Android 15', 6.5, '2025-01-12', 210),
+('Asus', 'Zenfone 11', 879.99, 512, 'Android 15', 5.9, '2025-02-03', 85),
+('Nokia', 'G500', 329.99, 64, 'Android 15', 6.5, '2025-01-18', 170),
+('Honor', '90 Lite', 379.99, 256, 'Android 15', 6.7, '2025-01-24', 130),
+('ZTE', 'Blade V70', 279.99, 64, 'Android 15', 6.5, '2025-01-16', 150);
 
 
 

@@ -224,7 +224,3 @@ class HorlogesController extends BaseController
 }
 
 
-
-
-
-
